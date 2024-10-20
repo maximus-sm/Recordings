@@ -2,7 +2,6 @@
 //  ContentView.swift
 //  RecordingsSwiftUI
 //
-//  Created by Sundet Mukhtar on 19.10.2024.
 //
 
 import SwiftUI

@@ -14,6 +14,10 @@
 		5753EC972CC3685E004BB8D8 /* RecordingsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753EC962CC3685E004BB8D8 /* RecordingsSwiftUITests.swift */; };
 		5753ECA12CC3685E004BB8D8 /* RecordingsSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECA02CC3685E004BB8D8 /* RecordingsSwiftUIUITests.swift */; };
 		5753ECA32CC3685E004BB8D8 /* RecordingsSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECA22CC3685E004BB8D8 /* RecordingsSwiftUIUITestsLaunchTests.swift */; };
+		5753ECB32CC369FF004BB8D8 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB22CC369FF004BB8D8 /* Row.swift */; };
+		5753ECB52CC36B5A004BB8D8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB42CC36B5A004BB8D8 /* List.swift */; };
+		5753ECB72CC37716004BB8D8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB62CC37716004BB8D8 /* Player.swift */; };
+		5753ECB92CC37D31004BB8D8 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB82CC37D31004BB8D8 /* Recorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		5753EC9C2CC3685E004BB8D8 /* RecordingsSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordingsSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5753ECA02CC3685E004BB8D8 /* RecordingsSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsSwiftUIUITests.swift; sourceTree = "<group>"; };
 		5753ECA22CC3685E004BB8D8 /* RecordingsSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5753ECB22CC369FF004BB8D8 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		5753ECB42CC36B5A004BB8D8 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		5753ECB62CC37716004BB8D8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		5753ECB82CC37D31004BB8D8 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		5753EC842CC3685D004BB8D8 /* RecordingsSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5753ECB12CC36945004BB8D8 /* Helper */,
+				5753ECB02CC3693E004BB8D8 /* Model */,
+				5753ECAF2CC36935004BB8D8 /* View */,
 				5753EC852CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift */,
 				5753EC872CC3685D004BB8D8 /* ContentView.swift */,
 				5753EC892CC3685D004BB8D8 /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				5753ECA22CC3685E004BB8D8 /* RecordingsSwiftUIUITestsLaunchTests.swift */,
 			);
 			path = RecordingsSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		5753ECAF2CC36935004BB8D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5753ECB22CC369FF004BB8D8 /* Row.swift */,
+				5753ECB42CC36B5A004BB8D8 /* List.swift */,
+				5753ECB62CC37716004BB8D8 /* Player.swift */,
+				5753ECB82CC37D31004BB8D8 /* Recorder.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5753ECB02CC3693E004BB8D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5753ECB12CC36945004BB8D8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5753EC882CC3685D004BB8D8 /* ContentView.swift in Sources */,
+				5753ECB92CC37D31004BB8D8 /* Recorder.swift in Sources */,
+				5753ECB52CC36B5A004BB8D8 /* List.swift in Sources */,
+				5753ECB32CC369FF004BB8D8 /* Row.swift in Sources */,
 				5753EC862CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift in Sources */,
+				5753ECB72CC37716004BB8D8 /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
