@@ -7,17 +7,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(ModelData.self) var modelData
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        //Record().environment(modelData)
+        Text("Hee")
+        Record(modelData.folder)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().environment(ModelData())
 }

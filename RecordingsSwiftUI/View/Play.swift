@@ -6,7 +6,7 @@
 
 import SwiftUI
 
-struct Player: View {
+struct Play: View {
     var name = "Recording"
     var currentTime = "00:00"
     var overallTime = "03:00"
@@ -32,5 +32,5 @@ struct Player: View {
 }
 
 #Preview {
-    Player()
+    Play()
 }
