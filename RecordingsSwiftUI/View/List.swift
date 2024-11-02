@@ -7,26 +7,26 @@
 import SwiftUI
 
 struct ListOfElements: View {
+    var viewModel:FolderViewModel;
     @State private var showAlert = false;
     @State private var showingRecorder = false;
     @State var newItemName = "";//Optimize redrawings caused by this property
     //@State var currentFolder = ModelData().folder
-    var viewModel = FolderViewModel(folder: Store.shared.rootFolder)
+    
     var titleNmae = "Recordings"
-    @State var folder:Folder
     
     init(folder:Folder){
-        self.folder = folder;
-        viewModel = FolderViewModel(folder: self.folder)
+        viewModel = FolderViewModel(folder: folder)
     }
     
     var body: some View {
+        let model = viewModel
         NavigationStack {
             List{
                 let _ = print("list \(viewModel.name)")
                 let _ = print("count in list \(viewModel.folder.contents.count)")
 
-                ForEach(viewModel.folder.contents) { item in
+                ForEach(model.contents) { item in
                     NavigationLink {
                         if let folder = item as? Folder{
                             ListOfElements(folder: folder)
@@ -40,6 +40,7 @@ struct ListOfElements: View {
                     }
 
                 }.onDelete(perform: deleteRow(at:))
+                
             }.animation(.easeInOut)
             .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle(titleNmae)
@@ -68,9 +69,8 @@ struct ListOfElements: View {
                         //CreateFolderAlertView(showingAlert: $showAlert)
                         Button("Add", systemImage: "plus") {
                             showingRecorder.toggle()
-                        }.sheet(isPresented: $showingRecorder, content: {
-                            //Record().environment(ModelData(currentFolder))
-                            Record(viewModel.folder)
+                        }.fullScreenCover(isPresented: $showingRecorder, content: {
+                            Record().environment(viewModel)
                         })
                     }
                 }
@@ -78,43 +78,13 @@ struct ListOfElements: View {
     }
     
     func deleteRow(at offsets: IndexSet){
-        
         viewModel.delete(at: offsets.first! as Int)
     }
 }
 
 
-struct CreateFolderAlertView:View {
-    @Binding private var showingAlert:Bool;
-    
-    var body: some View {
-        
-        Button("New Folder", systemImage: "folder") {
-            showingAlert = true
-        }.alert("Create new folder", isPresented: $showingAlert) {
-            
-            VStack{
-                
-                TextField("Give a name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                
-                HStack {
-                    
-                    Button("Create"){//add action
-                    }
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("Cancel").foregroundStyle(Color.red)
-                    })
-                    
-                }
-                
-            }
-        }
-    }
-}
-
-
 #Preview {
-    return ListOfElements(folder:Store.shared.rootFolder)
+    return ListOfElements(folder: Store.shared.rootFolder)
 }
 
 

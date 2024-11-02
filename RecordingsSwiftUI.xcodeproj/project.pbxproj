@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5708F0382CCFF08700687F91 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5708F0372CCFF08700687F91 /* RecordViewModel.swift */; };
-		571E21582CD3A4F700790C60 /* FolderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571E21572CD3A4F700790C60 /* FolderModel.swift */; };
 		57415C0D2CC5EE0400475181 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C0C2CC5EE0400475181 /* Store.swift */; };
 		57415C0F2CC6158300475181 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C0E2CC6158300475181 /* Item.swift */; };
 		57415C112CC615BB00475181 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C102CC615BB00475181 /* Recording.swift */; };
@@ -49,8 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5708F0372CCFF08700687F91 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
-		571E21572CD3A4F700790C60 /* FolderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderModel.swift; sourceTree = "<group>"; };
 		57415C0C2CC5EE0400475181 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		57415C0E2CC6158300475181 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		57415C102CC615BB00475181 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
@@ -168,7 +164,6 @@
 				5753ECB22CC369FF004BB8D8 /* Row.swift */,
 				5753ECB62CC37716004BB8D8 /* Play.swift */,
 				5753ECB82CC37D31004BB8D8 /* Record.swift */,
-				5708F0372CCFF08700687F91 /* RecordViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				57415C142CC61E0800475181 /* ModelData.swift */,
-				571E21572CD3A4F700790C60 /* FolderModel.swift */,
 				57415C0C2CC5EE0400475181 /* Store.swift */,
 				57415C0E2CC6158300475181 /* Item.swift */,
 				57415C122CC615CE00475181 /* Folder.swift */,
@@ -335,8 +329,6 @@
 				57415C192CC6998C00475181 /* Player.swift in Sources */,
 				5753ECB52CC36B5A004BB8D8 /* List.swift in Sources */,
 				57FF05FD2CD1721100C71E06 /* FolderViewModel.swift in Sources */,
-				571E21582CD3A4F700790C60 /* FolderModel.swift in Sources */,
-				5708F0382CCFF08700687F91 /* RecordViewModel.swift in Sources */,
 				57415C112CC615BB00475181 /* Recording.swift in Sources */,
 				57415C0F2CC6158300475181 /* Item.swift in Sources */,
 				57415C152CC61E0800475181 /* ModelData.swift in Sources */,

@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         //Record().environment(modelData)
         Text("Hee")
-        Record(modelData.folder)
+        //Record(modelData.folder)
     }
 }
 

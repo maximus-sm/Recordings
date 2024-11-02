@@ -8,20 +8,15 @@ import SwiftUI
 
 struct Record: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(FolderViewModel.self) var viewModel;
     @State private var showingAlert = false;
     @State private var name = ""
     
     //var folder: Folder?;
-    var viewModel:RecordViewModel
+    //var viewModel:RecordViewModel
     var isDissmissed = false
     
-    
-    init(_ f:Folder){
-        //folder = f;
-        viewModel = RecordViewModel(f)
-    }
 
-    
     var body: some View {
         @Bindable var model = viewModel;
         VStack(spacing:50) {
@@ -48,6 +43,8 @@ struct Record: View {
             .alert("Save the recording", isPresented: $showingAlert, actions: {
                 VStack{
                     TextField("Give a name", text: $name)
+                        .autocorrectionDisabled(true)
+                        
                     HStack {
                         Button("Save") {
                             model.stop(name)
@@ -67,12 +64,16 @@ struct Record: View {
             .foregroundStyle(.white)
             .clipShape(RoundedRectangle(cornerSize: CGSize(width: 15, height: 10), style: .continuous))
             
-        }
+            
+        }.onAppear(perform: {
+            model.start()
+        })
         
     }
 }
 
 #Preview {
-    var folder = ModelData().folder
-    return Record(folder)
+    var folder = Store.shared.rootFolder;
+    @State var viewModel = FolderViewModel(folder: folder)
+    return Record().environment(viewModel)
 }
