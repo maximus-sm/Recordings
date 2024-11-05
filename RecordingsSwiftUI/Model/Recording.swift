@@ -2,7 +2,7 @@
 //  Recording.swift
 //  RecordingsSwiftUI
 //
-//  Created by Sundet Mukhtar on 21.10.2024.
+//  Created by on 21.10.2024.
 //
 import Foundation
 
@@ -18,7 +18,7 @@ class Recording: Item, Codable {
         store?.removeFile(for: self)
         super.deleted()
     }
-
+    
     enum RecordingKeys: CodingKey { case name, uuid }
     
     required init(from decoder: Decoder) throws {
@@ -27,10 +27,15 @@ class Recording: Item, Codable {
         let name = try c.decode(String.self, forKey: .name)
         super.init(name: name, uuid: uuid)
     }
-
+    
     func encode(to encoder: Encoder) throws {
         var c = encoder.container(keyedBy: RecordingKeys.self)
-        try c.encode(name, forKey: .name)
-        try c.encode(uuid, forKey: .uuid)
+        do{
+            try c.encode(name, forKey: .name)
+            try c.encode(uuid, forKey: .uuid)
+        }catch{
+            print(error.localizedDescription)
+        }
+        
     }
 }

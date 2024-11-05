@@ -45,21 +45,31 @@ import Foundation
     }
     
     
+    func delete(at offsets:IndexSet){
+        for i in offsets{
+            folder.remove(contents[i])
+        }
+        contents = folder.contents;
+    }
+    
+    
     //Methods for Record View.
     func start(){
-        print(folder.contents.count)
+        //print(folder.contents.count)
         self.audioRecorder = self.folder.store?.fileURL(for: self.recording).flatMap({  url in
             Recorder(url: url) { time in
                 if let t = time{
                     self.time = timeString(t);
                 }else{
                     //dismiss view;
+                    print("dismiss")
                     self.isDismissed = true
                 }
             }
         })
         if self.audioRecorder == nil{
             //dismiss
+            print("dismiss")
             isDismissed = true
         }
         
@@ -68,6 +78,7 @@ import Foundation
     
     
     func stop(_ title:String?){
+        audioRecorder?.stop()
         guard let title = title else{
             recording.deleted()
             return
@@ -76,7 +87,7 @@ import Foundation
         recording.setName(title)
         folder.add(recording)
         contents = folder.contents
-        print(folder.contents.count)
+        //print(folder.contents.count)
         //print("From record view model: f-id\(folder.self) f.contents-id \(folder.contents.self)")
     }
     

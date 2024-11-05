@@ -10,8 +10,7 @@ struct ListOfElements: View {
     var viewModel:FolderViewModel;
     @State private var showAlert = false;
     @State private var showingRecorder = false;
-    @State var newItemName = "";//Optimize redrawings caused by this property
-    //@State var currentFolder = ModelData().folder
+    @State var newItemName = "";//Optimize redrawings
     
     var titleNmae = "Recordings"
     
@@ -23,15 +22,13 @@ struct ListOfElements: View {
         let model = viewModel
         NavigationStack {
             List{
-                let _ = print("list \(viewModel.name)")
-                let _ = print("count in list \(viewModel.folder.contents.count)")
-
                 ForEach(model.contents) { item in
                     NavigationLink {
                         if let folder = item as? Folder{
                             ListOfElements(folder: folder)
                         }else{
-                            Play()
+                            let recording = item as! Recording;
+                            Play(recording)
                         }
                             
                     } label: {
@@ -78,7 +75,8 @@ struct ListOfElements: View {
     }
     
     func deleteRow(at offsets: IndexSet){
-        viewModel.delete(at: offsets.first! as Int)
+        //viewModel.delete(at: offsets.first! as Int)
+        viewModel.delete(at: offsets)
     }
 }
 

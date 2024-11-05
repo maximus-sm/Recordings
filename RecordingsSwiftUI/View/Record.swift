@@ -12,18 +12,14 @@ struct Record: View {
     @State private var showingAlert = false;
     @State private var name = ""
     
-    //var folder: Folder?;
-    //var viewModel:RecordViewModel
-    var isDissmissed = false
+    
     
 
     var body: some View {
         @Bindable var model = viewModel;
         VStack(spacing:50) {
             if(model.isDismissed){
-                //let _ = print("before")
-                //let _ = dismiss()//??
-                //let _ = print("after")
+                let _ = dismiss()
             }
             
             Image(systemName: "mic.circle.fill")

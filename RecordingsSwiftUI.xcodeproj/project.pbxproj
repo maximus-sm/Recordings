@@ -11,12 +11,10 @@
 		57415C0F2CC6158300475181 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C0E2CC6158300475181 /* Item.swift */; };
 		57415C112CC615BB00475181 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C102CC615BB00475181 /* Recording.swift */; };
 		57415C132CC615CE00475181 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C122CC615CE00475181 /* Folder.swift */; };
-		57415C152CC61E0800475181 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C142CC61E0800475181 /* ModelData.swift */; };
 		57415C172CC6991000475181 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C162CC6991000475181 /* Recorder.swift */; };
 		57415C192CC6998C00475181 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C182CC6998C00475181 /* Player.swift */; };
 		57415C1B2CC6E85800475181 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57415C1A2CC6E85800475181 /* Utilities.swift */; };
 		5753EC862CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753EC852CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift */; };
-		5753EC882CC3685D004BB8D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753EC872CC3685D004BB8D8 /* ContentView.swift */; };
 		5753EC8A2CC3685D004BB8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5753EC892CC3685D004BB8D8 /* Assets.xcassets */; };
 		5753EC8D2CC3685D004BB8D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5753EC8C2CC3685D004BB8D8 /* Preview Assets.xcassets */; };
 		5753EC972CC3685E004BB8D8 /* RecordingsSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753EC962CC3685E004BB8D8 /* RecordingsSwiftUITests.swift */; };
@@ -26,6 +24,7 @@
 		5753ECB52CC36B5A004BB8D8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB42CC36B5A004BB8D8 /* List.swift */; };
 		5753ECB72CC37716004BB8D8 /* Play.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB62CC37716004BB8D8 /* Play.swift */; };
 		5753ECB92CC37D31004BB8D8 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753ECB82CC37D31004BB8D8 /* Record.swift */; };
+		57D632D12CD6F21E001B65CA /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D632D02CD6F21E001B65CA /* PlayViewModel.swift */; };
 		57FF05FD2CD1721100C71E06 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF05FC2CD1721100C71E06 /* FolderViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,13 +50,11 @@
 		57415C0E2CC6158300475181 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		57415C102CC615BB00475181 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		57415C122CC615CE00475181 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
-		57415C142CC61E0800475181 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		57415C162CC6991000475181 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		57415C182CC6998C00475181 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		57415C1A2CC6E85800475181 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5753EC822CC3685D004BB8D8 /* RecordingsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordingsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5753EC852CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsSwiftUIApp.swift; sourceTree = "<group>"; };
-		5753EC872CC3685D004BB8D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5753EC892CC3685D004BB8D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5753EC8C2CC3685D004BB8D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5753EC922CC3685E004BB8D8 /* RecordingsSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordingsSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +66,7 @@
 		5753ECB42CC36B5A004BB8D8 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		5753ECB62CC37716004BB8D8 /* Play.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play.swift; sourceTree = "<group>"; };
 		5753ECB82CC37D31004BB8D8 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		57D632D02CD6F21E001B65CA /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
 		57FF05FC2CD1721100C71E06 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +122,6 @@
 				5753ECB02CC3693E004BB8D8 /* Model */,
 				5753ECAF2CC36935004BB8D8 /* View */,
 				5753EC852CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift */,
-				5753EC872CC3685D004BB8D8 /* ContentView.swift */,
 				5753EC892CC3685D004BB8D8 /* Assets.xcassets */,
 				5753EC8B2CC3685D004BB8D8 /* Preview Content */,
 			);
@@ -159,11 +156,12 @@
 		5753ECAF2CC36935004BB8D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				57DB4BAD2CD9B68B00C97155 /* Helpers */,
 				5753ECB42CC36B5A004BB8D8 /* List.swift */,
-				57FF05FC2CD1721100C71E06 /* FolderViewModel.swift */,
-				5753ECB22CC369FF004BB8D8 /* Row.swift */,
-				5753ECB62CC37716004BB8D8 /* Play.swift */,
 				5753ECB82CC37D31004BB8D8 /* Record.swift */,
+				57FF05FC2CD1721100C71E06 /* FolderViewModel.swift */,
+				5753ECB62CC37716004BB8D8 /* Play.swift */,
+				57D632D02CD6F21E001B65CA /* PlayViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,7 +169,6 @@
 		5753ECB02CC3693E004BB8D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				57415C142CC61E0800475181 /* ModelData.swift */,
 				57415C0C2CC5EE0400475181 /* Store.swift */,
 				57415C0E2CC6158300475181 /* Item.swift */,
 				57415C122CC615CE00475181 /* Folder.swift */,
@@ -186,6 +183,14 @@
 				57415C162CC6991000475181 /* Recorder.swift */,
 				57415C182CC6998C00475181 /* Player.swift */,
 				57415C1A2CC6E85800475181 /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		57DB4BAD2CD9B68B00C97155 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5753ECB22CC369FF004BB8D8 /* Row.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -320,10 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D632D12CD6F21E001B65CA /* PlayViewModel.swift in Sources */,
 				57415C0D2CC5EE0400475181 /* Store.swift in Sources */,
 				57415C132CC615CE00475181 /* Folder.swift in Sources */,
 				57415C1B2CC6E85800475181 /* Utilities.swift in Sources */,
-				5753EC882CC3685D004BB8D8 /* ContentView.swift in Sources */,
 				57415C172CC6991000475181 /* Recorder.swift in Sources */,
 				5753ECB92CC37D31004BB8D8 /* Record.swift in Sources */,
 				57415C192CC6998C00475181 /* Player.swift in Sources */,
@@ -331,7 +336,6 @@
 				57FF05FD2CD1721100C71E06 /* FolderViewModel.swift in Sources */,
 				57415C112CC615BB00475181 /* Recording.swift in Sources */,
 				57415C0F2CC6158300475181 /* Item.swift in Sources */,
-				57415C152CC61E0800475181 /* ModelData.swift in Sources */,
 				5753ECB32CC369FF004BB8D8 /* Row.swift in Sources */,
 				5753EC862CC3685D004BB8D8 /* RecordingsSwiftUIApp.swift in Sources */,
 				5753ECB72CC37716004BB8D8 /* Play.swift in Sources */,
