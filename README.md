@@ -1,7 +1,7 @@
 2,055 / 5,000
 # Recordings
 This project is based on the example project from the book `App Architecture iOS Application Design Patterns in Swift by Chris Eidhof, Matt Gallagher, and Florian Kugler`
-
+- <img src="https://github.com/maximus-sm/Recordings/blob/main/example.gif" width="25%" height="25%"/>
 ## Goal
 Transfer project from UIKit to SwiftUI framework.
 
